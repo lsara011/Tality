@@ -173,7 +173,7 @@ a:active {
   }
 }
 
-@media only screen and (max-width: 425px){
+@media only screen and (max-width: 430px){
 
   .MainSection{
     background-size: 60% !important;
@@ -207,7 +207,7 @@ a:active {
   }
 }
 
-@media only screen and (max-width: 320px){
+@media only screen and (max-width: 375px){
   .mainSection-title h1{
     margin: 0 !important;
     font-size: 50px !important;
