@@ -14,7 +14,7 @@ export const MainSection = ({ setJobData }) => {
     setLoading(true); // Set loading state to true when the API call starts
 
     try {
-      const response = await axios.get('http://127.0.0.1:8080/api/job-listings', {
+      const response = await axios.get('https://talityBE.onrender.com/api/job-listings', {
         params: {
           what: jobTitle,
           where: location,
