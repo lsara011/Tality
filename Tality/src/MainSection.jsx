@@ -14,12 +14,12 @@ export const MainSection = ({ setJobData }) => {
     setLoading(true); // Set loading state to true when the API call starts
 
     try {
-      const response = await axios.get('https://talityBE.onrender.com/api/job-listings', {
+      const response = await axios.get('https://TalityBE.onrender.com/api/job-listings', {
         params: {
-          what: jobTitle,
-          where: location,
+            what: jobTitle,
+            where: location,
         },
-      });
+    });
 
       if (response.data.message === 'No Jobs Found') {
         setMessage('No Jobs Found');
