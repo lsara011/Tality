@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export function Header() {
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNavbar = () => {
@@ -16,16 +18,24 @@ export function Header() {
         <div className={`nav-links ${isOpen ? "open" : ""}`}>
           <ul>
             <li>
-              <a href="#Home">Home</a>
+              <NavLink to="/Tality" className="active" exact>
+                Home
+              </NavLink>
             </li>
             <li>
-              <a href="#Job-Listings">Job Listings</a>
+              <NavLink to="/Tality/job-listings" className="active">
+                Job Listings
+              </NavLink>
             </li>
             <li>
-              <a href="#Career-Resources">Career Resources</a>
+              <NavLink to="/Tality/career-resources" className="active">
+                Career Resources
+              </NavLink>
             </li>
             <li>
-              <a href="#About-Us">About Us</a>
+              <NavLink to="/Tality/about-us" className="active">
+                About Tality
+              </NavLink>
             </li>
           </ul>
         </div>

@@ -38,7 +38,6 @@ nav {
   align-items: center;
   background-color: black;
   transition: 1s ease-in;
-  position: fixed;
   width: 100%;
   z-index: 1000;
 }
@@ -56,11 +55,11 @@ nav {
 
 ul > li {
   padding: 20px;
-  font-family: Bodoni;
+  font-family: Narrow;
   font-size: 25px;
 }
 
-a {
+.active {
   cursor: pointer;
   position: relative;
   color: white;
@@ -68,7 +67,7 @@ a {
   transition: 175ms ease-in;
 }
 
-a::after {
+.active::after {
   content: '';
   position: absolute;
   width: 0;
@@ -80,15 +79,15 @@ a::after {
   bottom: -2px;
 }
 
-a:hover::after {
+.active:hover::after {
   width: 100%;
 }
 
-a:hover {
+.active:hover {
   color: rgb(96, 80, 80);
 }
 
-a:active {
+.active:active {
   color: rgb(34, 20, 20);
 }
 
@@ -153,6 +152,7 @@ a:active {
   }
 
   .menu-icon {
+    margin:  10px;
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -171,26 +171,58 @@ a:active {
   .mainSection-title h1{
     font-size: 60px !important;
   }
+
+  .project-desc{
+    margin: 20px auto;
+    max-width: 600px !important;
+  }
 }
 
-@media only screen and (max-width: 430px){
+@media only screen and (max-width: 768px) {
 
+  .mainSection-title h1{
+    font-size: 47px !important;
+  }
+
+  form input{
+    width: 200px !important;
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 540px){
   .MainSection{
     background-size: 60% !important;
-    
   }
-  form{
-    background-color: white;
-    display: flex;
+
+  .section-nav{
     flex-direction: column !important;
   }
 
+  .mainSection-title h1{
+    padding-bottom: 80px !important;
+    font-size: 45px !important;
+    margin: 5px !important;
+  }
+
+  form{
+    background-color: white;
+    display: flex;
+    width: 300px ;
+    flex-direction: column !important;
+  }
+
+  form input{
+    width: 100% !important;
+  }
 
   .form-group1 input{
     border-top-right-radius: 30px !important;
     border-bottom-left-radius: 0;
   }
-
+  .project-desc{
+    margin: 0 25px !important;
+  }
 
   .search-button{
     height: 60px;
@@ -209,16 +241,36 @@ a:active {
 
 @media only screen and (max-width: 375px){
   .mainSection-title h1{
-    margin: 0 !important;
-    font-size: 50px !important;
+    font-size: 40px !important;
+    
   }
 
+  .job-listings{
+    padding: 0 !important;
+    gap: 0 !important;
+  }
+
+
+  .job-listing-container{
+    gap: 0 !important;
+    width: auto !important;
+    margin: 0 auto;
+  }
+
+  .error{
+    font-size: 35px !important;
+    margin-bottom: 335px !important;
+  }
+
+  form, form input{
+    width: 200px;    
+  }
   .MainSection{
-    background-size: 80% !important;
+    background-size: 60% !important;
   }
+
+
 }
-
-
 
 .MainSection{
   background-color: rgb(234, 241, 248);
@@ -226,7 +278,7 @@ a:active {
   background-position:bottom;
   background-repeat: no-repeat;
   background-size: 600px;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -305,3 +357,189 @@ form input{
   text-decoration: none; 
 }
 
+.error{
+  text-align: center;
+  width: 100%;
+  font-family: Playwrite;
+  font-size: 45px;
+  padding-top: 200px;
+}
+
+.new-search{
+  text-align: center;
+  font-family: oswald;
+  font-size: 25px;
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: 0 40px;
+  text-decoration: none;
+  color: white;
+  background-color: #000;
+}
+
+.job-listing-container{
+  justify-content: center;
+  display: flex;
+  flex-direction: row !important; 
+  flex-wrap: wrap; 
+  gap: 20px; 
+  padding: 20px;
+  margin: 15px;
+}
+
+.job-listings {
+  text-align: center;
+  width: 100%;
+  padding: 25px;
+}
+
+.job-listings h2 {
+  padding: 15px;
+  text-align: center;
+  font-family: Oswald;
+}
+
+.job-listing-details {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 600px;
+  background-color: white;
+  text-align: left;
+  font-family: Oswald;
+  margin: 15px;
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 1px 8px 12px black;
+}
+
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Oswald;
+  font-size: 20px;
+  padding: 50px;
+}
+
+.loading-spinner::after {
+  content: '';
+  width: 40px;
+  height: 40px;
+  border: 5px solid #ccc;
+  border-top: 5px solid #007AFF;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.about-title h1{
+  text-align: center;
+  font-family: Oswald;
+  font-size: 35px;
+
+}
+.project-desc{
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content:center;
+  margin: 20px auto;
+  max-width: 1000px;
+
+}
+.auintro{
+  text-align: center;
+  font-family: Oswald;
+}
+
+.paragraph{
+  font-family: narrow;
+  margin: 15px 0;
+  font-size: 23px;
+  line-height: 35px;
+  margin-bottom: 75px;
+}
+
+span{
+  font-family: playwrite;
+}
+
+.signature{
+  font-size: 15px;
+}
+
+.career-title h1{
+  text-align: center;
+  font-family: Oswald;
+  margin: 25px;
+}
+
+.resume-section, .networking-section, .interview-section{
+  text-align: center;
+  padding: 25px;
+}
+
+.resume-section h1, .networking-section h1, .interview-section h1{
+  font-family: Narrow;
+}
+
+.section-nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin:  0 auto;
+}
+
+.section-nav button{
+  font-family: Narrow;
+  font-size: 20px;
+  cursor: pointer;
+  width: 250px;
+  height: 80px;
+  margin: 15px auto;
+  color: white;
+  background-color: #000;
+  border-radius: 30px;
+  transition: 100ms ease-in-out;
+}
+
+.section-nav button:hover{
+  color: black;
+  background-color: aliceblue;
+}
+
+.section-nav button:active{
+  background-color: rgb(64, 65, 66);
+}
+
+.resume-main-body, .networking-main-body, .interview-tips-body{
+  max-width: 1000px;
+  padding-top: 20px;
+  font-family: Narrow;
+  margin: 0 auto;
+  font-size: 25px;
+  text-align: left;
+}
+
+li{
+  list-style: none;
+}
+
+.resume-main-body p{
+  line-height: 45px;
+}
+
+.tip-section-wrapper{
+  padding-top: 55px;
+  padding-bottom: 35px;
+  border-bottom: 2px solid black;
+}
