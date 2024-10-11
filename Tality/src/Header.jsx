@@ -18,22 +18,22 @@ export function Header() {
         <div className={`nav-links ${isOpen ? "open" : ""}`}>
           <ul>
             <li>
-              <NavLink to="/home" className="active" exact>
+              <NavLink to="/Tality" className="active" exact>
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink to="/job-listings" className="active">
+              <NavLink to="/Tality/job-listings" className="active">
                 Job Listings
               </NavLink>
             </li>
             <li>
-              <NavLink to="/career-resources" className="active">
+              <NavLink to="/Tality/career-resources" className="active">
                 Career Resources
               </NavLink>
             </li>
             <li>
-              <NavLink to="/about-us" className="active">
+              <NavLink to="/Tality/about-us" className="active">
                 About Tality
               </NavLink>
             </li>
