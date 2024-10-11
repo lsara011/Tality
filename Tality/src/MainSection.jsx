@@ -27,7 +27,7 @@ export const MainSection = ({ setJobData }) => {
       } else {
         setJobData(response.data);
         setMessage('');
-        navigate('/Tality/job-listings');
+        navigate('/job-listings');
       }
     } catch (error) {
       console.error('Error fetching job data:', error);
