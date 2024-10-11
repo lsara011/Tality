@@ -11,13 +11,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
   const [jobData, setJobData] = useState(null); 
   return (
-    <Router basename='/'>
+    <Router basename='/Tality/'>
       <Header />
       <Routes>
-        <Route path="/Tality" element={<MainSection setJobData={setJobData} />} /> 
-        <Route path="/Tality/job-listings" element={<JobListings jobData={jobData} />} />
-        <Route path="/Tality/career-resources" element={<CareerResource/>} />
-        <Route path="/Tality/about-us" element={<AboutUs/>} />
+        <Route path="/" element={<MainSection setJobData={setJobData} />} /> 
+        <Route path="/job-listings" element={<JobListings jobData={jobData} />} />
+        <Route path="/career-resources" element={<CareerResource/>} />
+        <Route path="/about-us" element={<AboutUs/>} />
       </Routes>
       <Footer />
     </Router>
