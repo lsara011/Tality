@@ -22,7 +22,7 @@ const JobListings = ({ jobData }) => {
   return (
     <div className="job-listings">
       <h2>Job Listings</h2>
-      <h4><a href="/Tality"  className='new-search'>New Search</a></h4>
+      <button className='new-search'> New Search</button>
       <div className="job-listing-container">
         {sortedJobData.length > 0 ? (
           sortedJobData.map((job, index) => (
