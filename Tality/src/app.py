@@ -7,14 +7,14 @@ from flask_cors import CORS
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app)  
+CORS(app, origins=["https://lsara011.github.io"]) 
 
 @app.route('/api/job-listings', methods=['GET'])
 def get_job():
     api_key = os.getenv('ADZUNA_API_KEY')
     app_id = os.getenv('ADZUNA_APP_ID')
 
-    job_title = request.args.get('what', 'restaurant')  
+    job_title = request.args.get('what', 'server')  
     location = request.args.get('where', 'US')          
     desired_category = 'hospitality-catering-jobs'      
 

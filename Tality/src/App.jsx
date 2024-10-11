@@ -4,7 +4,7 @@ import { Footer } from './Footer';
 import { AboutUs } from './AboutUs';
 import { CareerResource } from './CareerResources';
 import { MainSection } from './MainSection';
-import JobListings from './JobListings';
+import { JobListings } from './JobListings';
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 

@@ -6,12 +6,12 @@ export const MainSection = ({ setJobData }) => {
   const [jobTitle, setJobTitle] = useState('');
   const [location, setLocation] = useState('');
   const [message, setMessage] = useState('');
-  const [loading, setLoading] = useState(false); // New loading state
+  const [loading, setLoading] = useState(false); 
   const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setLoading(true); // Set loading state to true when the API call starts
+    setLoading(true); 
 
     try {
       const response = await axios.get('https://TalityBE.onrender.com/api/job-listings', {
@@ -33,7 +33,7 @@ export const MainSection = ({ setJobData }) => {
       console.error('Error fetching job data:', error);
       setMessage('An error occurred while fetching job data.');
     } finally {
-      setLoading(false); // Reset loading state to false when the API call is complete
+      setLoading(false); 
     }
   };
 

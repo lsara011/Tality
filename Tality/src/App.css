@@ -285,6 +285,13 @@ ul > li {
   justify-content:center;
 }
 
+.loading{
+  font-size: 35px;
+  font-family: playwrite;
+  text-align: center;
+  padding-top: 100px;
+}
+
 form{
   display: flex;
   flex-direction: row;
@@ -366,6 +373,7 @@ form input{
 }
 
 .new-search{
+  cursor: pointer;
   text-align: center;
   font-family: oswald;
   font-size: 25px;
@@ -375,6 +383,12 @@ form input{
   text-decoration: none;
   color: white;
   background-color: #000;
+  transition: 200ms ease-in-out;
+}
+
+.new-search:hover{
+  background-color: aliceblue;
+  color:#000;
 }
 
 .job-listing-container{
