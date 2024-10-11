@@ -18,7 +18,7 @@ export function Header() {
         <div className={`nav-links ${isOpen ? "open" : ""}`}>
           <ul>
             <li>
-              <NavLink to="/Tality" className="active" exact>
+              <NavLink to="/Tality/" className="active" exact>
                 Home
               </NavLink>
             </li>
